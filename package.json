@@ -1,0 +1,27 @@
+{
+  "name": "weiixu-electron",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "cd src && npm run build && cd .. && npm run buildPackage" ,
+    "buildPackage": "npm run packageWin && cd package && grunt" ,
+    "package": " electron-packager . weiixu --win --out=./package --arch=x64 --app-version=2.0.1 --overwrite --ignore=node_modules",
+    "packageWin": "electron-packager . weiixu --platform=win32 --out=./package --arch=x64  --asar --app-version=2.0.1 --overwrite --ignore=\"(src|docs|.gitignore|LICENSE.md|README.md|node_modules)\"",
+    "packageDarwin": "electron-packager . weiixu --platform=darwin --out=./package --arch=x64 --asar --app-version=2.0.1 --overwrite --ignore=\"(src|docs|.gitignore|LICENSE.md|README.md|node_modules)\"",
+    "packageLinux": "electron-packager . weiixu --platform=linux --arch=x64 --out=./package --asar --app-version=2.0.1 --ignore=\"(src|docs|.gitignore|LICENSE.md|README.md|node_modules)\" --overwrite"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "demo"
+  ],
+  "author": "weiixu",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "electron-packager": "^12.2.0"
+  }
+}

@@ -1,0 +1,53 @@
+// 隐藏显示站长统计A链接的问题
+a[title="站长统计"] {
+  display: none;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.pull-right{
+  float: right;
+}
+
+// .color-flat,
+.color-up,
+.color-down{
+  &:after {
+    content: "";
+    font-family: 'icomoon' !important;
+  }
+  &.color-relative {
+    position: relative;
+    padding-right: .8rem !important;
+    &:after {
+      position: absolute;
+      right: -0.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.color-up {
+  color: $up !important;
+  &:after {
+    content: "\e906";
+  }
+}
+
+.color-down {
+  color: $down !important;
+  &:after {
+    content: "\e905";
+  }
+}
+
+.color-flat {
+  color: $flat !important;
+  &:after {
+    content: "";
+  }
+}
+.clearfix {
+  @include clearfix();
+}

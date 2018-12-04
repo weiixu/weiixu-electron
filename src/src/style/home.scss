@@ -1,0 +1,64 @@
+// 卡片高度
+$card-column-height: 30.7rem;
+$card-header-height: 1.875rem;
+.card-box {
+  margin-bottom: 2rem;
+  .el-scrollbar {
+    height: 100%;
+  }
+  .el-scrollbar__wrap {
+    overflow-x: hidden;
+  }
+  .el-tabs__nav {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.card-column {
+  .card-header {
+    height: $card-header-height;
+    border-bottom: none;
+    position: relative;
+    background-color: #fff;
+  }
+  .card-title {
+    position: absolute;
+    top: 0;
+    padding: .5rem 1rem;
+    z-index: 10;
+    height: $card-header-height + 1;
+    line-height: $card-header-height;
+    font-size: 1.38rem;
+    font-weight: normal;
+    color: #fff;
+    background-color: #14202F;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .card-body {
+    padding: 0;
+    @media (min-width: $screen-sm) {
+      height: $card-column-height; // overflow-y: auto;
+    }
+    overflow: hidden;
+    background-color: #F7F9FA;
+  }
+}
+
+.card-header {
+  height: 3rem;
+  border-bottom: .13rem solid $primary;
+  padding: 1rem;
+  position: relative;
+}
+
+.card-title {
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 1.13rem;
+  font-weight: bold;
+  color: $primary;
+}
