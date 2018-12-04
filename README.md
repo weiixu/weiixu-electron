@@ -29,14 +29,14 @@ npm install
 npm start
 ```
 
-# Build .exe file
+# Build file
 
 ```bash
 # Go into the repository
 cd package
 # Install dependencies
 npm install
-# Run the app
+# Build .exe file
 grunt
 ```
 
