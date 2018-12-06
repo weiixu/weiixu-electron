@@ -4,7 +4,8 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron .",    
+    "dev": "cd src && npm run dev" ,
     "build": "cd src && npm run build && cd .. && npm run buildPackage" ,
     "buildPackage": "npm run packageWin && cd package && grunt" ,
     "package": " electron-packager . weiixu --win --out=./package --arch=x64 --app-version=2.0.1 --overwrite --ignore=node_modules",
