@@ -1,0 +1,8 @@
+{
+  "name": "gjmetal",
+  "version": "1.0.1",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-electron-installer": "^2.1.0"
+  }
+}

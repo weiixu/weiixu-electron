@@ -1,5 +1,5 @@
 node_modules
 /dist/
-package/
-package/!*.js
-package/!*.json
+/package/*
+!/package/*.js
+!/package/*.json
